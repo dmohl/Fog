@@ -6,13 +6,13 @@ open Microsoft.WindowsAzure.StorageClient
 open System.IO
 
 // This method returns a blob client for the provided connection string 
-let BuildBlobClientWithConn connectionString =
+let BuildBlobClientWithConnStr(connectionString) =
     let storageAccount = RoleEnvironment.GetConfigurationSettingValue connectionString 
                          |> CloudStorageAccount.Parse
     storageAccount.CreateCloudBlobClient()
 
 // Convention based approach for return a blob client with connection string named "BlobStorageConnectionString"
-let BuildBlobClient() = BuildBlobClientWithConn "BlobStorageConnectionString"
+let BuildBlobClient() = BuildBlobClientWithConnStr "BlobStorageConnectionString"
 
 let GetBlobContainer (client:CloudBlobClient) (containerName:string) = 
     let container = client.GetContainerReference <| containerName.ToLower()
@@ -22,36 +22,58 @@ let GetBlobContainer (client:CloudBlobClient) (containerName:string) =
 let DeleteBlobContainer (blobContainer:CloudBlobContainer) = 
     blobContainer.Delete()
 
-let GetBlobReference (container:CloudBlobContainer) (name:string) : CloudBlob = 
+let GetBlobReferenceInContainer (container:CloudBlobContainer) (name:string) : CloudBlob = 
     container.GetBlobReference <| name.ToLower() 
 
-let UploadToBlob<'a> (container:CloudBlobContainer) (blobName:string) (item:'a) = 
-    let blob = GetBlobReference container blobName
+let GetBlobReference (containerName:string) name : CloudBlob = 
+    let container = GetBlobContainer <| BuildBlobClient() <| containerName
+    GetBlobReferenceInContainer container name
+
+let UploadBlobToContainer<'a> (container:CloudBlobContainer) (blobName:string) (item:'a) = 
+    let blob = GetBlobReferenceInContainer container blobName
     match box item with
     | :? Stream as s -> blob.UploadFromStream s
     | :? string as text -> blob.UploadText text
     | :? (byte[]) as b -> blob.UploadByteArray b
     | _ -> failwith "This type is not supported"
+    blob
 
-let DownloadStreamFromBlob (container:CloudBlobContainer) (blobName:string) (stream:#Stream) = 
-    let blob = GetBlobReference container blobName
+let UploadBlob<'a> (containerName:string) (blobName:string) (item:'a) = 
+    let container = GetBlobContainer <| BuildBlobClient() <| containerName
+    UploadBlobToContainer<'a> container blobName item
+
+let DownloadBlobStreamFromContainer (container:CloudBlobContainer) (blobName:string) (stream:#Stream) = 
+    let blob = GetBlobReferenceInContainer container blobName
     blob.DownloadToStream stream
     stream.Seek(0L, SeekOrigin.Begin) |> ignore
 
-let DownloadFromBlob<'a> (container:CloudBlobContainer) (blobName:string) = 
-    let blob = GetBlobReference container blobName
+let DownloadBlobStream containerName blobName (stream:#Stream) = 
+    let container = GetBlobContainer <| BuildBlobClient() <| containerName
+    DownloadBlobStreamFromContainer container blobName stream
+
+let DownloadBlobFromContainer<'a> (container:CloudBlobContainer) (blobName:string) = 
+    let blob = GetBlobReferenceInContainer container blobName
     match typeof<'a> with
     | str when str = typeof<string> -> blob.DownloadText() |> box :?> 'a
     | b when b = typeof<byte[]> -> blob.DownloadByteArray() |> box :?> 'a
     | _ -> failwith "This type is not supported"
 
-//let UploadFileToBlob (container:CloudBlobContainer) (blobName:string) (filePath:string) = 
-//    UploadFromStreamToBlob container blobName <| File.OpenRead(filePath)
-//
-//let UploadStringToBlob (container:CloudBlobContainer) (blobName:string) (text:string) =
-//    let blob = GetBlobReference container blobName
-//    blob.UploadText text
-//
-//let UploadByteArrayToBlob (container:CloudBlobContainer) (blobName:string) (bytes:byte[]) =
-//    let blob = GetBlobReference container blobName
-//    blob.UploadByteArray bytes
+let DownloadBlob<'a> (containerName:string) (blobName:string) = 
+    let container = GetBlobContainer <| BuildBlobClient() <| containerName
+    DownloadBlobFromContainer<'a> container blobName
+
+let DeleteBlobFromContainer (container:CloudBlobContainer) (blobName:string) = 
+    let blob = GetBlobReferenceInContainer container blobName
+    blob.Delete()
+
+let DeleteBlob (containerName) (blobName:string) = 
+    let container = GetBlobContainer <| BuildBlobClient() <| containerName
+    DeleteBlobFromContainer container blobName
+
+let GetBlobMetadata (blobReference:CloudBlob) = 
+    blobReference.FetchAttributes()
+    blobReference.Metadata
+
+let SetBlobMetadata (metadata:list<string*string>) (blobReference:CloudBlob) = 
+    metadata |> Seq.iter(fun (k,v) -> blobReference.Metadata.Add(k, v))
+    blobReference.SetMetadata()
