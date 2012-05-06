@@ -1,0 +1,24 @@
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.fsprojResolveAssemblyReference.cache
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.XML
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.pdb
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.XML
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Fog.pdb
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.fsprojResolveAssemblyReference.cache
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog\obj\Debug\Fog.pdb
+C:\git\Fog\Fog\bin\Debug\Fog.XML
+C:\git\Fog\Fog\bin\Debug\Fog.dll
+C:\git\Fog\Fog\bin\Debug\Fog.pdb
+C:\git\Fog\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\git\Fog\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\git\Fog\Fog\obj\Debug\Fog.fsprojResolveAssemblyReference.cache
+C:\git\Fog\Fog\obj\Debug\Fog.dll
+C:\git\Fog\Fog\obj\Debug\Fog.pdb

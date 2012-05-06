@@ -1,0 +1,59 @@
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll.config
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.XML
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FSharp.Core.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FSharp.Core.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FsUnit.NUnit.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll.config
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.XML
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.pdb
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FSharp.Core.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FsUnit.NUnit.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\nunit.framework.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.pdb
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Fog.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\FSharp.Core.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\nunit.framework.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.dll
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.pdb
+E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\Fog.Intergration.Tests\bin\Debug\test.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\test.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll.config
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.XML
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.Intergration.Tests.pdb
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.Core.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FsUnit.NUnit.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\nunit.framework.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.pdb
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Fog.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.Core.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\nunit.framework.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
+C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache
+C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.dll
+C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.pdb
