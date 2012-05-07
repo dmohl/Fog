@@ -57,3 +57,7 @@ C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.x
 C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache
 C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.dll
 C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.pdb
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.dll
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.xml
+C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.xml

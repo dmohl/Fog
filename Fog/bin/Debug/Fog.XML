@@ -5,7 +5,7 @@
 <member name="">
 
 </member>
-<member name="">
+<member name="T:Fog.Core">
 
 </member>
 <member name="">
@@ -50,7 +50,31 @@
 <member name="">
 
 </member>
-<member name="T:Fog.Storage">
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Fog.Storage.Blob">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Fog.Storage.Table">
 
 </member>
 </members>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="fb7a70da-5034-4dd5-b765-4a005059be13" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="cc322535-540d-4701-93cb-8b7abd51a600" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FogAzureGroup" generation="1" functional="0" release="0">
       <settings>
@@ -13,9 +13,19 @@
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
           </maps>
         </aCS>
+        <aCS name="Fog.Intergration.Tests:TableStorageConnectionString" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TableStorageConnectionString" />
+          </maps>
+        </aCS>
         <aCS name="Fog.Intergration.Tests:TestBlobStorageConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestBlobStorageConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestTableStorageConnectionString" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestTableStorageConnectionString" />
           </maps>
         </aCS>
         <aCS name="Fog.Intergration.TestsInstances" defaultValue="[1,1,1]">
@@ -35,9 +45,19 @@
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
           </setting>
         </map>
+        <map name="MapFog.Intergration.Tests:TableStorageConnectionString" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TableStorageConnectionString" />
+          </setting>
+        </map>
         <map name="MapFog.Intergration.Tests:TestBlobStorageConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestBlobStorageConnectionString" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestTableStorageConnectionString" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestTableStorageConnectionString" />
           </setting>
         </map>
         <map name="MapFog.Intergration.TestsInstances" kind="Identity">
@@ -52,7 +72,9 @@
             <settings>
               <aCS name="BlobStorageConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
+              <aCS name="TableStorageConnectionString" defaultValue="" />
               <aCS name="TestBlobStorageConnectionString" defaultValue="" />
+              <aCS name="TestTableStorageConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Fog.Intergration.Tests&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Fog.Intergration.Tests&quot; /&gt;&lt;/m&gt;" />
             </settings>
             <resourcereferences>

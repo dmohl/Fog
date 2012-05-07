@@ -22,3 +22,7 @@ C:\git\Fog\Fog\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
 C:\git\Fog\Fog\obj\Debug\Fog.fsprojResolveAssemblyReference.cache
 C:\git\Fog\Fog\obj\Debug\Fog.dll
 C:\git\Fog\Fog\obj\Debug\Fog.pdb
+C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.dll
+C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.Linq.dll
+C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.xml
+C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.Linq.xml

@@ -16,6 +16,8 @@
     <ConfigurationSettings>
       <Setting name="BlobStorageConnectionString" />
       <Setting name="TestBlobStorageConnectionString" />
+      <Setting name="TableStorageConnectionString" />
+      <Setting name="TestTableStorageConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

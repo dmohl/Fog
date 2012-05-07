@@ -17,8 +17,11 @@ type WorkerRole() =
     let log message kind = Trace.WriteLine(message, kind)
 
     override wr.Run() =
-        log "Fog.Intergration.Tests entry point called" "Information"
-        ``Fog Storage Tests``.RunAll()
-        log "Fog.Intergration.Tests completed successfully" "Information"
-
+        try
+            log "Fog.Intergration.Tests entry point called" "Information"
+            Fog.Storage.Blob.Tests.RunAll()
+            Fog.Storage.Table.Tests.RunAll()
+            log "Fog.Intergration.Tests completed successfully" "Information"
+        with
+        | ex -> log ex.Message "ERROR"
     override wr.OnStart() = base.OnStart()
