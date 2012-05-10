@@ -54,10 +54,10 @@ C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.Core.xml
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\nunit.framework.xml
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
-C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache
 C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.dll
 C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.pdb
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.dll
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.dll
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.xml
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.xml
+C:\git\Fog\Fog.Intergration.Tests\obj\Debug\ResolveAssemblyReference.cache
