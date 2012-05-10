@@ -37,6 +37,7 @@
     <Compile Include="Fog.Core.fs" />
     <Compile Include="Fog.Storage.Blob.fs" />
     <Compile Include="Fog.Storage.Table.fs" />
+    <Compile Include="Fog.Storage.Queue.fs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

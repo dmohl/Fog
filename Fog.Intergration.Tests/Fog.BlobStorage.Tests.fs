@@ -92,6 +92,7 @@ let ``It should allow association of metadata for a blob``() =
     metadata.["testmeta"] |> should equal "Test"
 
 // TODO:
+// 3 Memoise the client and queue? Stress Test
 // 4. Need to add ability to use a different connection string easily. 
 // 5. Add async version of the most important functions (i.e. download/upload) -> Might wait until VS11 support is added. These will likely be provided OOTB.
 // 6. Make all downloads and uploads run in parallel? -> Might wait until VS11 support is added.

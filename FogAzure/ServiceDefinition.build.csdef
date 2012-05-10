@@ -18,6 +18,8 @@
       <Setting name="TestBlobStorageConnectionString" />
       <Setting name="TableStorageConnectionString" />
       <Setting name="TestTableStorageConnectionString" />
+      <Setting name="QueueStorageConnectionString" />
+      <Setting name="TestQueueStorageConnectionString" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

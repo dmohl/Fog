@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="16604afd-774d-401f-85d5-d0718df63300" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="e59e1046-f4a2-422f-988a-0a827589d70d" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FogAzureGroup" generation="1" functional="0" release="0">
       <settings>
@@ -13,6 +13,11 @@
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
           </maps>
         </aCS>
+        <aCS name="Fog.Intergration.Tests:QueueStorageConnectionString" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:QueueStorageConnectionString" />
+          </maps>
+        </aCS>
         <aCS name="Fog.Intergration.Tests:TableStorageConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TableStorageConnectionString" />
@@ -21,6 +26,11 @@
         <aCS name="Fog.Intergration.Tests:TestBlobStorageConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestBlobStorageConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestQueueStorageConnectionString" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestQueueStorageConnectionString" />
           </maps>
         </aCS>
         <aCS name="Fog.Intergration.Tests:TestTableStorageConnectionString" defaultValue="">
@@ -45,6 +55,11 @@
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
           </setting>
         </map>
+        <map name="MapFog.Intergration.Tests:QueueStorageConnectionString" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/QueueStorageConnectionString" />
+          </setting>
+        </map>
         <map name="MapFog.Intergration.Tests:TableStorageConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TableStorageConnectionString" />
@@ -53,6 +68,11 @@
         <map name="MapFog.Intergration.Tests:TestBlobStorageConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestBlobStorageConnectionString" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestQueueStorageConnectionString" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestQueueStorageConnectionString" />
           </setting>
         </map>
         <map name="MapFog.Intergration.Tests:TestTableStorageConnectionString" kind="Identity">
@@ -72,8 +92,10 @@
             <settings>
               <aCS name="BlobStorageConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
+              <aCS name="QueueStorageConnectionString" defaultValue="" />
               <aCS name="TableStorageConnectionString" defaultValue="" />
               <aCS name="TestBlobStorageConnectionString" defaultValue="" />
+              <aCS name="TestQueueStorageConnectionString" defaultValue="" />
               <aCS name="TestTableStorageConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Fog.Intergration.Tests&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Fog.Intergration.Tests&quot; /&gt;&lt;/m&gt;" />
             </settings>

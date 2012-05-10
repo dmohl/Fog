@@ -9,12 +9,12 @@ open Fog.Core
 open Microsoft.FSharp.Linq
 open Microsoft.FSharp.Linq.Query
 
-// This method returns a blob client for the provided connection string 
+// This method returns a table client for the provided connection string 
 let BuildTableClientWithConnStr(connectionString) =
     let storageAccount = GetStorageAccount connectionString
     storageAccount.CreateCloudTableClient()
 
-// Convention based approach for return a blob client with connection string named "BlobStorageConnectionString"
+// Convention based approach for return a table client with connection string named "BlobStorageConnectionString"
 let BuildTableClient() = BuildTableClientWithConnStr "TableStorageConnectionString"
 
 let CreateEntityWithClient (client:CloudTableClient) (tableName:string) entity = 

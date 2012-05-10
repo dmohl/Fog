@@ -8,6 +8,8 @@
       <Setting name="TestBlobStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="TableStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="TestTableStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="QueueStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="TestQueueStorageConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

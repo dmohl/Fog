@@ -7,8 +7,10 @@
     <ConfigurationSettings>
       <Setting name="BlobStorageConnectionString" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="QueueStorageConnectionString" />
       <Setting name="TableStorageConnectionString" />
       <Setting name="TestBlobStorageConnectionString" />
+      <Setting name="TestQueueStorageConnectionString" />
       <Setting name="TestTableStorageConnectionString" />
     </ConfigurationSettings>
     <Endpoints />

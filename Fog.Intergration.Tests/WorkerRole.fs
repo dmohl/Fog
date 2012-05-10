@@ -21,6 +21,7 @@ type WorkerRole() =
             log "Fog.Intergration.Tests entry point called" "Information"
             Fog.Storage.Blob.Tests.RunAll()
             Fog.Storage.Table.Tests.RunAll()
+            Fog.Storage.Queue.Tests.RunAll()
             log "Fog.Intergration.Tests completed successfully" "Information"
         with
         | ex -> log ex.Message "ERROR"
