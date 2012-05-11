@@ -8,8 +8,9 @@ open Fog.Core
 
 // This method returns a blob client for the provided connection string 
 let BuildBlobClientWithConnStr(connectionString) =
-    let storageAccount = GetStorageAccount connectionString
-    storageAccount.CreateCloudBlobClient()
+    memoize (fun conn -> 
+               let storageAccount = GetStorageAccount conn
+               storageAccount.CreateCloudBlobClient() ) connectionString
 
 // Convention based approach for return a blob client with connection string named "BlobStorageConnectionString"
 let BuildBlobClient() = BuildBlobClientWithConnStr "BlobStorageConnectionString"

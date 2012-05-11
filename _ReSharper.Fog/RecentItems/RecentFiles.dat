@@ -1,40 +1,47 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="4301" fromTop="18" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="340" fromTop="11" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Blob.fs" caret="3492" fromTop="77" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="752" fromTop="11" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1444" fromTop="15" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="3387" fromTop="0" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="507" fromTop="10" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="964" fromTop="12" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="962" fromTop="11" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceDefinition.csdef" caret="654" fromTop="12" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="5213" fromTop="7" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="4696" fromTop="10" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="798" fromTop="12" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="2593" fromTop="17" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3016" fromTop="11" />
   </RecentFiles>
   <RecentEdits>
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="2106" fromTop="15" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="5190" fromTop="12" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="6208" fromTop="20" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1253" fromTop="16" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1253" fromTop="16" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1253" fromTop="18" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="340" fromTop="15" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="191" fromTop="6" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="340" fromTop="12" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="340" fromTop="16" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1386" fromTop="10" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="340" fromTop="11" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1253" fromTop="10" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="648" fromTop="11" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="407" fromTop="5" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1253" fromTop="15" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="2487" fromTop="11" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="4768" fromTop="20" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1033" fromTop="12" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1033" fromTop="10" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="3214" fromTop="7" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1035" fromTop="19" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1996" fromTop="16" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="269" fromTop="0" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="707" fromTop="18" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1033" fromTop="3" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="622" fromTop="0" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="1444" fromTop="15" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="303" fromTop="6" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="556" fromTop="11" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="748" fromTop="14" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="432" fromTop="8" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="434" fromTop="3" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="899" fromTop="7" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="63" fromTop="3" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="1572" fromTop="14" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="1304" fromTop="4" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="1112" fromTop="18" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="1090" fromTop="10" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3141" fromTop="11" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="39" fromTop="2" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="5213" fromTop="7" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="4696" fromTop="10" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3819" fromTop="20" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="2770" fromTop="7" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3082" fromTop="18" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="2532" fromTop="20" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="2689" fromTop="19" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="2849" fromTop="14" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="2232" fromTop="11" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="2845" fromTop="12" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="4169" fromTop="15" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="4356" fromTop="19" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="2340" fromTop="17" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="1702" fromTop="9" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="843" fromTop="18" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="1382" fromTop="3" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3016" fromTop="11" />
   </RecentEdits>
 </RecentFiles>

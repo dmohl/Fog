@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="e59e1046-f4a2-422f-988a-0a827589d70d" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="b264f3aa-4d14-4d10-8716-fb3cef3cf539" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FogAzureGroup" generation="1" functional="0" release="0">
       <settings>

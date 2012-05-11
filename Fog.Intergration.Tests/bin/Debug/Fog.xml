@@ -5,6 +5,9 @@
 <member name="">
 
 </member>
+<member name="">
+
+</member>
 <member name="T:Fog.Core">
 
 </member>
@@ -99,6 +102,9 @@
 
 </member>
 <member name="T:Fog.Storage.Queue">
+
+</member>
+<member name="">
 
 </member>
 <member name="">

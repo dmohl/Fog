@@ -11,8 +11,10 @@ open Microsoft.FSharp.Linq.Query
 
 // This method returns a table client for the provided connection string 
 let BuildTableClientWithConnStr(connectionString) =
-    let storageAccount = GetStorageAccount connectionString
-    storageAccount.CreateCloudTableClient()
+    memoize (fun conn -> 
+                  let storageAccount = GetStorageAccount conn
+                  storageAccount.CreateCloudTableClient()
+            ) connectionString 
 
 // Convention based approach for return a table client with connection string named "BlobStorageConnectionString"
 let BuildTableClient() = BuildTableClientWithConnStr "TableStorageConnectionString"
@@ -48,3 +50,6 @@ let UpdateEntity (tableName:string) newEntity =
     let client = BuildTableClient()
     UpdateEntityWithClient client tableName newEntity
 
+let DeleteEntity (tableName:string) entity = 
+    let client = BuildTableClient()
+    DeleteEntityWithDataContext client tableName entity

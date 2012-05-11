@@ -9,8 +9,9 @@ open Fog.Core
 
 // This method returns a queue client for the provided connection string 
 let BuildQueueClientWithConnStr(connectionString) =
-    let storageAccount = GetStorageAccount connectionString
-    storageAccount.CreateCloudQueueClient()
+    memoize (fun conn -> 
+                 let storageAccount = GetStorageAccount conn
+                 storageAccount.CreateCloudQueueClient() ) connectionString 
 
 // Convention based approach for return a queue client with connection string named "BlobStorageConnectionString"
 let BuildQueueClient() = BuildQueueClientWithConnStr "QueueStorageConnectionString"

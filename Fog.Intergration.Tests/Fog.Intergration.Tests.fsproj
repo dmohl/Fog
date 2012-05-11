@@ -38,6 +38,7 @@
     <Compile Include="Fog.BlobStorage.Tests.fs" />
     <Compile Include="Fog.TableStorage.Tests.fs" />
     <Compile Include="Fog.QueueStorage.Tests.fs" />
+    <Compile Include="Storage.Load.Tests.fs" />
     <Compile Include="WorkerRole.fs" />
     <None Include="app.config" />
     <None Include="packages.config" />
