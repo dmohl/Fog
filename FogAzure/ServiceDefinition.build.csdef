@@ -20,6 +20,16 @@
       <Setting name="TestTableStorageConnectionString" />
       <Setting name="QueueStorageConnectionString" />
       <Setting name="TestQueueStorageConnectionString" />
+      <Setting name="ServiceBusIssuer" />
+      <Setting name="ServiceBusKey" />
+      <Setting name="ServiceBusScheme" />
+      <Setting name="ServiceBusNamespace" />
+      <Setting name="ServiceBusServicePath" />
+      <Setting name="TestServiceBusIssuer" />
+      <Setting name="TestServiceBusKey" />
+      <Setting name="TestServiceBusScheme" />
+      <Setting name="TestServiceBusNamespace" />
+      <Setting name="TestServiceBusServicePath" />
     </ConfigurationSettings>
   </WorkerRole>
 </ServiceDefinition>

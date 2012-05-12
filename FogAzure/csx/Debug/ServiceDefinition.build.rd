@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="b264f3aa-4d14-4d10-8716-fb3cef3cf539" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="2636f8a4-74da-4e83-8554-d02e0c0d756b" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FogAzureGroup" generation="1" functional="0" release="0">
       <settings>
@@ -18,6 +18,31 @@
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:QueueStorageConnectionString" />
           </maps>
         </aCS>
+        <aCS name="Fog.Intergration.Tests:ServiceBusIssuer" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:ServiceBusIssuer" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:ServiceBusKey" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:ServiceBusKey" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:ServiceBusNamespace" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:ServiceBusNamespace" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:ServiceBusScheme" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:ServiceBusScheme" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:ServiceBusServicePath" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:ServiceBusServicePath" />
+          </maps>
+        </aCS>
         <aCS name="Fog.Intergration.Tests:TableStorageConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TableStorageConnectionString" />
@@ -31,6 +56,31 @@
         <aCS name="Fog.Intergration.Tests:TestQueueStorageConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestQueueStorageConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestServiceBusIssuer" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestServiceBusIssuer" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestServiceBusKey" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestServiceBusKey" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestServiceBusNamespace" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestServiceBusNamespace" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestServiceBusScheme" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestServiceBusScheme" />
+          </maps>
+        </aCS>
+        <aCS name="Fog.Intergration.Tests:TestServiceBusServicePath" defaultValue="">
+          <maps>
+            <mapMoniker name="/FogAzure/FogAzureGroup/MapFog.Intergration.Tests:TestServiceBusServicePath" />
           </maps>
         </aCS>
         <aCS name="Fog.Intergration.Tests:TestTableStorageConnectionString" defaultValue="">
@@ -60,6 +110,31 @@
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/QueueStorageConnectionString" />
           </setting>
         </map>
+        <map name="MapFog.Intergration.Tests:ServiceBusIssuer" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/ServiceBusIssuer" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:ServiceBusKey" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/ServiceBusKey" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:ServiceBusNamespace" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/ServiceBusNamespace" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:ServiceBusScheme" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/ServiceBusScheme" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:ServiceBusServicePath" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/ServiceBusServicePath" />
+          </setting>
+        </map>
         <map name="MapFog.Intergration.Tests:TableStorageConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TableStorageConnectionString" />
@@ -73,6 +148,31 @@
         <map name="MapFog.Intergration.Tests:TestQueueStorageConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestQueueStorageConnectionString" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestServiceBusIssuer" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestServiceBusIssuer" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestServiceBusKey" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestServiceBusKey" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestServiceBusNamespace" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestServiceBusNamespace" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestServiceBusScheme" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestServiceBusScheme" />
+          </setting>
+        </map>
+        <map name="MapFog.Intergration.Tests:TestServiceBusServicePath" kind="Identity">
+          <setting>
+            <aCSMoniker name="/FogAzure/FogAzureGroup/Fog.Intergration.Tests/TestServiceBusServicePath" />
           </setting>
         </map>
         <map name="MapFog.Intergration.Tests:TestTableStorageConnectionString" kind="Identity">
@@ -93,9 +193,19 @@
               <aCS name="BlobStorageConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
               <aCS name="QueueStorageConnectionString" defaultValue="" />
+              <aCS name="ServiceBusIssuer" defaultValue="" />
+              <aCS name="ServiceBusKey" defaultValue="" />
+              <aCS name="ServiceBusNamespace" defaultValue="" />
+              <aCS name="ServiceBusScheme" defaultValue="" />
+              <aCS name="ServiceBusServicePath" defaultValue="" />
               <aCS name="TableStorageConnectionString" defaultValue="" />
               <aCS name="TestBlobStorageConnectionString" defaultValue="" />
               <aCS name="TestQueueStorageConnectionString" defaultValue="" />
+              <aCS name="TestServiceBusIssuer" defaultValue="" />
+              <aCS name="TestServiceBusKey" defaultValue="" />
+              <aCS name="TestServiceBusNamespace" defaultValue="" />
+              <aCS name="TestServiceBusScheme" defaultValue="" />
+              <aCS name="TestServiceBusServicePath" defaultValue="" />
               <aCS name="TestTableStorageConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Fog.Intergration.Tests&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Fog.Intergration.Tests&quot; /&gt;&lt;/m&gt;" />
             </settings>

@@ -10,6 +10,16 @@
       <Setting name="TestTableStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="QueueStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="TestQueueStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="ServiceBusIssuer" value="owner" />
+      <Setting name="ServiceBusKey" value="REPLACE" />
+      <Setting name="ServiceBusScheme" value="sb" />
+      <Setting name="ServiceBusNamespace" value="dmohlfsmvc4azure" />
+      <Setting name="ServiceBusServicePath" value="" />
+      <Setting name="TestServiceBusIssuer" value="owner" />
+      <Setting name="TestServiceBusKey" value="TestREPLACE" />
+      <Setting name="TestServiceBusScheme" value="sb" />
+      <Setting name="TestServiceBusNamespace" value="dmohlfsmvc4azure" />
+      <Setting name="TestServiceBusServicePath" value="" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

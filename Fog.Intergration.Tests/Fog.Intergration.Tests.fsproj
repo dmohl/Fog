@@ -38,6 +38,7 @@
     <Compile Include="Fog.BlobStorage.Tests.fs" />
     <Compile Include="Fog.TableStorage.Tests.fs" />
     <Compile Include="Fog.QueueStorage.Tests.fs" />
+    <Compile Include="Fog.ServiceBus.Tests.fs" />
     <Compile Include="Storage.Load.Tests.fs" />
     <Compile Include="WorkerRole.fs" />
     <None Include="app.config" />
@@ -58,6 +59,9 @@
     <Reference Include="FsUnit.NUnit">
       <HintPath>..\packages\FsUnit.1.1.0.0\Lib\Net40\FsUnit.NUnit.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus">
+      <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\ServiceBus\ref\Microsoft.ServiceBus.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core">
@@ -84,6 +88,8 @@
       <Project>{5c231890-6169-40c1-85d5-7798f054f41e}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 	     Other similar extension points exist, see Microsoft.Common.targets.

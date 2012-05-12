@@ -29,10 +29,11 @@ type WorkerRole() =
             Fog.Storage.Blob.Tests.RunAll()
             Fog.Storage.Table.Tests.RunAll()
             Fog.Storage.Queue.Tests.RunAll()
+            Fog.ServiceBus.Tests.RunAll()
             log "Fog.Intergration.Tests completed successfully" "Information"
             //duration Storage.Load.Tests.RunBlobTest
-            duration Storage.Load.Tests.RunTableTest
-            duration Storage.Load.Tests.RunQueueTest
+            //duration Storage.Load.Tests.RunTableTest
+            //duration Storage.Load.Tests.RunQueueTest
         with
         | ex -> log ex.Message "ERROR"
     override wr.OnStart() = base.OnStart()
