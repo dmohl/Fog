@@ -25,6 +25,6 @@ C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.dll
 C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.Linq.dll
 C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.xml
 C:\git\Fog\Fog\bin\Debug\FSharp.PowerPack.Linq.xml
-C:\git\Fog\Fog\obj\Debug\ResolveAssemblyReference.cache
 C:\git\Fog\Fog\bin\Debug\Microsoft.ServiceBus.dll
 C:\git\Fog\Fog\bin\Debug\Microsoft.ServiceBus.xml
+C:\git\Fog\Fog\obj\Debug\Fog.fsprojResolveAssemblyReference.cache

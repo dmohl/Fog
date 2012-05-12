@@ -4,13 +4,16 @@ open System
 open Microsoft.ServiceBus
 open Microsoft.ServiceBus.Messaging
 open Microsoft.WindowsAzure.ServiceRuntime
+open Fog.Core
 
-// TODO: Consider memoization
 let CreateSecurityTokenWithKeys issuerConfigKey keyConfigKey = 
-    let issuer = RoleEnvironment.GetConfigurationSettingValue issuerConfigKey 
-    let key = RoleEnvironment.GetConfigurationSettingValue keyConfigKey
-    TokenProvider.CreateSharedSecretTokenProvider(issuer, key)    
-
+    memoize 
+        (fun issuerKey keyKey -> 
+               let issuer = RoleEnvironment.GetConfigurationSettingValue issuerKey 
+               let key = RoleEnvironment.GetConfigurationSettingValue keyKey
+               TokenProvider.CreateSharedSecretTokenProvider(issuer, key)
+        ) issuerConfigKey keyConfigKey   
+    
 let CreateSecurityToken() =
     CreateSecurityTokenWithKeys "ServiceBusIssuer" "ServiceBusKey"
 
@@ -27,13 +30,14 @@ let CreateQueueWithManager (serviceQueueManager:NamespaceManager) (queueName:str
     | true -> serviceQueueManager.GetQueue(qName)
     | _ -> serviceQueueManager.CreateQueue(qName)
 
-// TODO: Consider memoization
-let GetMessagingFactory (uri:Uri) (tokenProvider:TokenProvider) =
-    MessagingFactory.Create(uri, tokenProvider)   
+let GetMessagingFactory (address:string) (tokenProvider:TokenProvider) =
+    memoize
+        (fun (addr:string) (tp:TokenProvider) -> 
+            MessagingFactory.Create(addr, tp) ) address tokenProvider   
     
 let SendMessageWithManager (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) message = 
     CreateQueueWithManager serviceManager queueName |> ignore
-    let factory = GetMessagingFactory serviceManager.Address tokenProvider 
+    let factory = GetMessagingFactory serviceManager.Address.AbsoluteUri tokenProvider 
     let messageSender = factory.CreateMessageSender(queueName.ToLower())
     use message = new BrokeredMessage(message)
     messageSender.Send(message)
@@ -48,7 +52,7 @@ let SendMessage (queueName:string) message =
 
 let HandleMessagesWithManager (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) successHandler failureHandler = 
     CreateQueueWithManager serviceManager queueName |> ignore
-    let factory = GetMessagingFactory serviceManager.Address tokenProvider 
+    let factory = GetMessagingFactory serviceManager.Address.AbsoluteUri tokenProvider 
     let messageReceiver = factory.CreateMessageReceiver(queueName.ToLower())
     let rec handleMessage() = async {
         let message = messageReceiver.Receive()

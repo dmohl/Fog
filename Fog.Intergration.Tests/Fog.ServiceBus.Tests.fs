@@ -53,7 +53,6 @@ let ``It should handle a message with friendly function``() =
         <| fun ex m -> raise ex        
   
 // TODO:
-// 1. Add memoization
 // 2. Add async options
 // 3. Is there a better way to determine the default Uri?
 

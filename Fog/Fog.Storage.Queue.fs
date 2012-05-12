@@ -7,13 +7,11 @@ open Microsoft.WindowsAzure.StorageClient
 open System.Data.Services.Client
 open Fog.Core
 
-// This method returns a queue client for the provided connection string 
 let BuildQueueClientWithConnStr(connectionString) =
     memoize (fun conn -> 
                  let storageAccount = GetStorageAccount conn
                  storageAccount.CreateCloudQueueClient() ) connectionString 
 
-// Convention based approach for return a queue client with connection string named "BlobStorageConnectionString"
 let BuildQueueClient() = BuildQueueClientWithConnStr "QueueStorageConnectionString"
 
 let GetQueueReference (client:CloudQueueClient) (queueName:string) =
@@ -26,7 +24,7 @@ let CreateQueueWithClient (client:CloudQueueClient) (queueName:string) =
 
 let DeleteQueueWithClient (client:CloudQueueClient) (queueName:string) =
     let queue = GetQueueReference client queueName
-    queue.Delete()
+    if queue.Exists() then queue.Delete()
 
 let AddMessageWithClient (client:CloudQueueClient) (queueName:string) content =
     let queue = CreateQueueWithClient client queueName

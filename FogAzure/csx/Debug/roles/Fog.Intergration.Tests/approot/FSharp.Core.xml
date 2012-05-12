@@ -3588,6 +3588,43 @@
 <member name="">
 
 </member>
+<member name="M:Microsoft.FSharp.Control.CommonExtensions.SubscribeToObservable``1(System.IObservable{``0},Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
+ <summary>Connects a listener function to the observable. The listener will
+ be invoked for each observation. The listener can be removed by
+ calling Dispose on the returned IDisposable object.</summary>
+ <param name="callback">The function to be called for each observation.</param>
+ <returns>An object that will remove the listener if disposed.</returns>
+</member>
+<member name="M:Microsoft.FSharp.Control.CommonExtensions.AddToObservable``1(System.IObservable{``0},Microsoft.FSharp.Core.FSharpFunc`2{``0,Microsoft.FSharp.Core.Unit})">
+ <summary>Permanently connects a listener function to the observable. The listener will
+ be invoked for each observation.</summary>
+ <param name="callback">The function to be called for each observation.</param>
+</member>
+<member name="M:Microsoft.FSharp.Control.CommonExtensions.AsyncWrite(System.IO.Stream,System.Byte[],Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>Returns an asynchronous computation that will write the given bytes to the stream.</summary>
+ <param name="buffer">The buffer to write from.</param>
+ <param name="offset">An optional offset as a number of bytes in the stream.</param>
+ <param name="count">An optional number of bytes to write to the stream.</param>
+ <returns>An asynchronous computation that will write the given bytes to the stream.</returns>
+ <exception cref="System.ArgumentException">Thrown when the sum of offset and count is longer than
+ the buffer length.</exception>
+ <exception cref="System.ArgumentOutOfRangeException">Thrown when offset or count is negative.</exception>
+</member>
+<member name="M:Microsoft.FSharp.Control.CommonExtensions.AsyncReadBytes(System.IO.Stream,System.Int32)">
+ <summary>Returns an asynchronous computation that will read the given number of bytes from the stream.</summary>
+ <param name="count">The number of bytes to read.</param>
+ <returns>An asynchronous computation that returns the read byte[] when run.</returns> 
+</member>
+<member name="M:Microsoft.FSharp.Control.CommonExtensions.AsyncRead(System.IO.Stream,System.Byte[],Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>Returns an asynchronous computation that will read from the stream into the given buffer.</summary>
+ <param name="buffer">The buffer to read into.</param>
+ <param name="offset">An optional offset as a number of bytes in the stream.</param>
+ <param name="count">An optional number of bytes to read from the stream.</param>
+ <returns>An asynchronous computation that will read from the stream into the given buffer.</returns>
+ <exception cref="System.ArgumentException">Thrown when the sum of offset and count is longer than
+ the buffer length.</exception>
+ <exception cref="System.ArgumentOutOfRangeException">Thrown when offset or count is negative.</exception>
+</member>
 <member name="T:Microsoft.FSharp.Control.CommonExtensions">
  <summary>A module of extension members providing asynchronous operations for some basic CLI types related to concurrency and I/O.</summary>
 </member>
@@ -3661,6 +3698,21 @@
 </member>
 <member name="T:Microsoft.FSharp.Control.EventModule">
 
+</member>
+<member name="M:Microsoft.FSharp.Control.LazyExtensions.Force``1(System.Lazy{``0})">
+ <summary>Forces the execution of this value and return its result. Same as Value. Mutual exclusion is used to 
+ prevent other threads also computing the value.</summary>
+ <returns>The value of the Lazy object.</returns>
+</member>
+<member name="M:Microsoft.FSharp.Control.LazyExtensions.CreateFromValue``1(``0)">
+ <summary>Creates a lazy computation that evaluates to the given value when forced.</summary>
+ <param name="value">The input value.</param>
+ <returns>The created Lazy object.</returns>
+</member>
+<member name="M:Microsoft.FSharp.Control.LazyExtensions.Create``1(Microsoft.FSharp.Core.FSharpFunc`2{Microsoft.FSharp.Core.Unit,``0})">
+ <summary>Creates a lazy computation that evaluates to the result of the given function when forced.</summary>
+ <param name="creator">The function to provide the value when needed.</param>
+ <returns>The created Lazy object.</returns>
 </member>
 <member name="T:Microsoft.FSharp.Control.LazyExtensions">
  <summary>Extensions related to Lazy values.</summary>
@@ -3777,6 +3829,15 @@
 </member>
 <member name="T:Microsoft.FSharp.Control.ObservableModule">
  <summary>Basic operations on first class event and other observable objects.</summary>
+</member>
+<member name="M:Microsoft.FSharp.Control.WebExtensions.AsyncDownloadString(System.Net.WebClient,System.Uri)">
+ <summary>Returns an asynchronous computation that, when run, will wait for the download of the given URI.</summary>
+ <param name="address">The URI to retrieve.</param>
+ <returns>An asynchronous computation that will wait for the download of the URI.</returns>
+</member>
+<member name="M:Microsoft.FSharp.Control.WebExtensions.AsyncGetResponse(System.Net.WebRequest)">
+ <summary>Returns an asynchronous computation that, when run, will wait for a response to the given WebRequest.</summary>
+ <returns>An asynchronous computation that waits for response to the <c>WebRequest</c>.</returns>
 </member>
 <member name="T:Microsoft.FSharp.Control.WebExtensions">
  <summary>A module of extension members providing asynchronous operations for some basic Web operations.</summary>

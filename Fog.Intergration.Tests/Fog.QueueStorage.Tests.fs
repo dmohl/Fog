@@ -70,9 +70,6 @@ let ``It should delete a message with an easy function``() =
         DeleteMessage "testqueue" m
 
 // TODO:
-// .5 Memoise the client and queue? Stress Test
-// 1. Add friendly functions, get message, get messages 
-// 2. Need to add ability to use a different connection string easily. 
 // 3. Add async version of the most important functions (i.e. download/upload) -> Might wait until VS11 support is added. These will likely be provided OOTB.
 // 4. Make all downloads and uploads run in parallel? -> Might wait until VS11 support is added.
 // 5. This gets improved once we can use F# 3.0. OData Type Provider, OOTB Query syntax, etc. make this even easier. Need to build some of that in when VS11 support is added.

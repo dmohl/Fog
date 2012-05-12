@@ -20,7 +20,7 @@
       <Setting name="QueueStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="TestQueueStorageConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="ServiceBusIssuer" value="owner" />
-      <Setting name="ServiceBusKey" value="Ow9xOHC48tDnXfkCK+CZW/C/EM//5KlwqVo6U+qOpDI=" />
+      <Setting name="ServiceBusKey" value="REPLACE" />
       <Setting name="ServiceBusScheme" value="sb" />
       <Setting name="ServiceBusNamespace" value="dmohlfsmvc4azure" />
       <Setting name="ServiceBusServicePath" value="" />

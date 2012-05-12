@@ -60,6 +60,6 @@ C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.dll
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.dll
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.xml
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\FSharp.PowerPack.Linq.xml
-C:\git\Fog\Fog.Intergration.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.ServiceBus.dll
 C:\git\Fog\Fog.Intergration.Tests\bin\Debug\Microsoft.ServiceBus.xml
+C:\git\Fog\Fog.Intergration.Tests\obj\Debug\Fog.Intergration.Tests.fsprojResolveAssemblyReference.cache

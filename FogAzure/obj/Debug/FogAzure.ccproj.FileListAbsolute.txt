@@ -34,26 +34,3 @@ E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FShar
 E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\FogAzure\obj\Debug\Fog.Intergration.Tests\nunit.framework.xml
 E:\Dropbox\Dropbox\Dan\Book\Building Web, Cloud, and Mobile Solutions with FSharp\CodeExamples\FsWebAPIAzure\FogAzure\obj\Debug\Fog.Intergration.Tests\test.xml
 C:\git\Fog\FogAzure\bin\Debug\ServiceConfiguration.cscfg
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.Intergration.Tests.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.Intergration.Tests.dll.config
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.Intergration.Tests.pdb
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.Intergration.Tests.XML
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.pdb
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Fog.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.Core.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.Core.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.PowerPack.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.PowerPack.Linq.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.PowerPack.Linq.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FSharp.PowerPack.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\FsUnit.NUnit.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.ServiceBus.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.ServiceBus.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.WindowsAzure.Diagnostics.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.WindowsAzure.Diagnostics.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.WindowsAzure.StorageClient.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\Microsoft.WindowsAzure.StorageClient.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\nunit.framework.dll
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\nunit.framework.xml
-C:\git\Fog\FogAzure\obj\Debug\Fog.Intergration.Tests\test.xml

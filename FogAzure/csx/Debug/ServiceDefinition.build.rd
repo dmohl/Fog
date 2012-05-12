@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="2636f8a4-74da-4e83-8554-d02e0c0d756b" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FogAzure" generation="1" functional="0" release="0" Id="e640fc8e-c75b-4b65-8954-981c0df7e149" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FogAzureGroup" generation="1" functional="0" release="0">
       <settings>
@@ -188,7 +188,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="Fog.Intergration.Tests" generation="1" functional="0" release="0" software="C:\git\Fog\FogAzure\csx\Debug\roles\Fog.Intergration.Tests" entryPoint="base\x86\WaHostBootstrapper.exe" parameters="base\x86\WaWorkerHost.exe " memIndex="1792" hostingEnvironment="consoleroleadmin" hostingEnvironmentVersion="2">
+          <role name="Fog.Intergration.Tests" generation="1" functional="0" release="0" software="C:\git\Fog\FogAzure\csx\Debug\roles\Fog.Intergration.Tests" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaWorkerHost.exe " memIndex="1792" hostingEnvironment="consoleroleadmin" hostingEnvironmentVersion="2">
             <settings>
               <aCS name="BlobStorageConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />

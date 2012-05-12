@@ -6,13 +6,11 @@ open Microsoft.WindowsAzure.StorageClient
 open System.IO
 open Fog.Core
 
-// This method returns a blob client for the provided connection string 
 let BuildBlobClientWithConnStr(connectionString) =
     memoize (fun conn -> 
                let storageAccount = GetStorageAccount conn
                storageAccount.CreateCloudBlobClient() ) connectionString
 
-// Convention based approach for return a blob client with connection string named "BlobStorageConnectionString"
 let BuildBlobClient() = BuildBlobClientWithConnStr "BlobStorageConnectionString"
 
 let GetBlobContainer (client:CloudBlobClient) (containerName:string) = 
