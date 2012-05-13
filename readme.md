@@ -71,14 +71,13 @@ To send a message do this:
 To receive a message, pass the queue name, a function to handle successful message retrieval, and another function to handle errors.
 
     HandleMessages "testQueue"
-        <| fun m -> m.GetBody<TestRecord>().Name
+        <| fun m -> printfn "%s" m.GetBody<TestRecord>().Name
         <| fun ex m -> raise ex        
 
 To use topics in a pub/sub type of scenario, use something like the following to subscribe:
 
     Subscribe "topictest2" "AllTopics4"
-        <| fun m ->
-              printfn "%s" m.GetBody<TestRecord>().Name
+        <| fun m -> printfn "%s" m.GetBody<TestRecord>().Name
         <| fun ex m -> raise ex        
 
 Message publishing can be accomplished like this:
