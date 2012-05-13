@@ -58,7 +58,7 @@ For queue storage, add the connection string configuration value with setting na
 
 **Service Bus**
 
-There are a few service bus related config entries. Here's the list expected names: ServiceBusIssuer, ServiceBusKey, ServiceBusScheme, ServiceBusNamespace, ServiceBusServicePath
+There are a few service bus related config entries. Here's the list of expected names: ServiceBusIssuer, ServiceBusKey, ServiceBusScheme, ServiceBusNamespace, ServiceBusServicePath
 
 To send a message do this:
 
