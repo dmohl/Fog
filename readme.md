@@ -15,13 +15,13 @@ Syntax
 With Fog all you have to do to interact with Azure blob Storage is to add the connection string information in the config with a name of 
 "BlobStorageConnectionString". Once that is done, you can use syntax like the following:
 
-   UploadBlob "testcontainer" "testblob" "This is a test" |> ignore
-   DeleteBlob "testcontainer" "testblob"
+	UploadBlob "testcontainer" "testblob" "This is a test" |> ignore
+	DeleteBlob "testcontainer" "testblob"
 
 or
 
-   UploadBlob "testcontainer" "testblob" testBytes |> ignore
-   DownloadBlob<byte[]> "testcontainer" "testblob" |> should equal testBytes
+	UploadBlob "testcontainer" "testblob" testBytes |> ignore
+	DownloadBlob<byte[]> "testcontainer" "testblob" |> should equal testBytes
 
 **Table Storage**
 
