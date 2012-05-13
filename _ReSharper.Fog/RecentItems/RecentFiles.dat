@@ -1,51 +1,52 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="426" fromTop="13" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="4345" fromTop="9" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="2593" fromTop="17" />
     <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceDefinition.csdef" caret="1114" fromTop="15" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:app.config" caret="0" fromTop="0" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3819" fromTop="11" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="407" fromTop="12" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Blob.fs" caret="463" fromTop="13" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="92" fromTop="4" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="1495" fromTop="18" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="6249" fromTop="6" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.TableStorage.Tests.fs" caret="4747" fromTop="26" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="1329" fromTop="16" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.QueueStorage.Tests.fs" caret="3012" fromTop="21" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:packages.config" caret="0" fromTop="0" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="3859" fromTop="7" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="4153" fromTop="19" />
     <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1071" fromTop="11" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="0" fromTop="0" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="6022" fromTop="62" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Storage.Load.Tests.fs" caret="1630" fromTop="5" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3064" fromTop="15" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="933" fromTop="7" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="193" fromTop="7" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Blob.fs" caret="391" fromTop="13" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="416" fromTop="0" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="99" fromTop="0" />
   </RecentFiles>
   <RecentEdits>
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="1209" fromTop="13" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="1553" fromTop="14" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="127" fromTop="7" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1905" fromTop="20" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="1542" fromTop="19" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1578" fromTop="20" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceDefinition.csdef" caret="1119" fromTop="17" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceDefinition.csdef" caret="1119" fromTop="16" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceDefinition.csdef" caret="1114" fromTop="15" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="2328" fromTop="17" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="3660" fromTop="20" />
-    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="3089" fromTop="14" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2698" fromTop="20" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2677" fromTop="20" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="395" fromTop="7" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2377" fromTop="16" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="466" fromTop="13" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2356" fromTop="16" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="445" fromTop="13" />
     <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="1125" fromTop="12" />
     <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Cloud.cscfg" caret="1495" fromTop="18" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1436" fromTop="17" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1262" fromTop="18" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1534" fromTop="16" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="775" fromTop="13" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1077" fromTop="19" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1399" fromTop="17" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1241" fromTop="18" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1513" fromTop="16" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="1056" fromTop="19" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="1168" fromTop="8" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2112" fromTop="17" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2091" fromTop="17" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3298" fromTop="10" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3305" fromTop="13" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3305" fromTop="13" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2912" fromTop="3" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="5073" fromTop="6" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="1113" fromTop="15" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="4190" fromTop="18" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.ServiceBus.fs" caret="4459" fromTop="24" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="792" fromTop="19" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3463" fromTop="18" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3664" fromTop="24" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3872" fromTop="25" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="4152" fromTop="25" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="4192" fromTop="9" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="155" fromTop="8" />
     <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1071" fromTop="11" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3319" fromTop="10" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3326" fromTop="13" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="3326" fromTop="13" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2933" fromTop="3" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="933" fromTop="7" />
+    <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="209" fromTop="8" />
   </RecentEdits>
 </RecentFiles>

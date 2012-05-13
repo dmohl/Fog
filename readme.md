@@ -29,7 +29,7 @@ The simpliest way to interact with Azure table Storage is to add the connection 
 "TableStorageConnectionString". Once that is done, you can use syntax like the following:
 
     [<DataServiceKey("PartitionKey", "RowKey")>]
-	type TestRecord() = 
+	type TestClass() = 
 		let mutable partitionKey = ""
 		let mutable rowKey = ""
 		let mutable name = ""
@@ -37,15 +37,15 @@ The simpliest way to interact with Azure table Storage is to add the connection 
 		member x.RowKey with get() = rowKey and set v = rowKey <- v
 		member x.Name with get() = name and set v = name <- v
 
-    let originalRecord = TestRecord( PartitionKey = "TestPart", RowKey = Guid.NewGuid().ToString(), Name = "test" )
+    let originalClass = TestClass( PartitionKey = "TestPart", RowKey = Guid.NewGuid().ToString(), Name = "test" )
     
-	CreateEntity "testtable" originalRecord |> ignore
+	CreateEntity "testtable" originalClass |> ignore
     
-	let newRecord = originalRecord
-    newRecord.Name <- "test2"
-    UpdateEntity "testtable" newRecord |> ignore
+	let newClass = originalClass
+    newClass.Name <- "test2"
+    UpdateEntity "testtable" newClass |> ignore
     
-	DeleteEntity "testtable"
+	DeleteEntity "testtable" newClass
 
 **Queue Storage**
 
