@@ -25,7 +25,7 @@ or
 
 **Table Storage**
 
-The simpliest way to interact with Azure table Storage is to add the connection string information in the config with a name of 
+The simplest way to interact with Azure table Storage is to add the connection string information in the config with a name of 
 "TableStorageConnectionString". Once that is done, you can use syntax like the following:
 
     [<DataServiceKey("PartitionKey", "RowKey")>]
