@@ -74,7 +74,7 @@ To receive a message, pass the queue name, a function to handle successful messa
         <| fun m -> m.GetBody<TestRecord>().Name
         <| fun ex m -> raise ex        
 
-To use topics in a pub/sub type of scenario, use the something like the following to subscribe:
+To use topics in a pub/sub type of scenario, use something like the following to subscribe:
 
     Subscribe "topictest2" "AllTopics4"
         <| fun m ->
