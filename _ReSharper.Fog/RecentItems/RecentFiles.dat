@@ -9,13 +9,13 @@
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:packages.config" caret="0" fromTop="0" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.BlobStorage.Tests.fs" caret="3859" fromTop="7" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="4153" fromTop="19" />
-    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1071" fromTop="11" />
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Storage.Load.Tests.fs" caret="1630" fromTop="5" />
-    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="933" fromTop="7" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Core.fs" caret="193" fromTop="7" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Blob.fs" caret="391" fromTop="13" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Queue.fs" caret="416" fromTop="0" />
+    <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:WorkerRole.fs" caret="933" fromTop="7" />
     <File id="5C231890-6169-40C1-85D5-7798F054F41E/f:Fog.Storage.Table.fs" caret="99" fromTop="0" />
+    <File id="B0FBE013-3ED1-4485-8A64-E6B131C256A4/f:ServiceConfiguration.Local.cscfg" caret="1382" fromTop="16" />
   </RecentFiles>
   <RecentEdits>
     <File id="C0381FA8-7461-4F75-9176-FD575B591C6A/f:Fog.ServiceBus.Tests.fs" caret="2677" fromTop="20" />

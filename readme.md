@@ -94,6 +94,11 @@ Releases
 =======
 0.1.0.0 - Is the initial release which provides support for Azure table, blob, and queue storage as well as Service Bus Queues and Topics. 
 
+Roadmap
+=======
+* Add async functions
+* Add code-based and convention based configuration
+
 MIT License
 =======
 
