@@ -12,7 +12,7 @@ Syntax
 
 **Blob Storage**
 
-With Fog all you have to do to interact with Azure blob Storage is to add the connection string information in the config with a name of 
+With Fog all you have to do to interact with Azure blob storage is to add the connection string information in the config with a name of 
 "BlobStorageConnectionString". Once that is done, you can use syntax like the following:
 
 	UploadBlob "testcontainer" "testblob" "This is a test" |> ignore
@@ -25,7 +25,7 @@ or
 
 **Table Storage**
 
-The simplest way to interact with Azure table Storage is to add the connection string information in the config with a name of 
+The simplest way to interact with Azure table storage is to add the connection string information in the config with a name of 
 "TableStorageConnectionString". Once that is done, you can use syntax like the following:
 
     [<DataServiceKey("PartitionKey", "RowKey")>]
