@@ -21,7 +21,7 @@ With Fog all you have to do to interact with Azure blob Storage is to add the co
 or
 
 	UploadBlob "testcontainer" "testblob" testBytes |> ignore
-	DownloadBlob<byte[]> "testcontainer" "testblob" |> should equal testBytes
+	DownloadBlob<byte[]> "testcontainer" "testblob"
 
 **Table Storage**
 
@@ -71,15 +71,14 @@ To send a message do this:
 To receive a message, pass the queue name, a function to handle successful message retrieval, and another function to handle errors.
 
     HandleMessages "testQueue"
-        <| fun m -> m.GetBody<TestRecord>().Name |> should equal "test"
+        <| fun m -> m.GetBody<TestRecord>().Name
         <| fun ex m -> raise ex        
 
 To use topics in a pub/sub type of scenario, use the something like the following to subscribe:
 
     Subscribe "topictest2" "AllTopics4"
         <| fun m ->
-              sub1 := "complete" 
-              m.GetBody<TestRecord>().Name |> should equal "test"
+              printfn "%s" m.GetBody<TestRecord>().Name
         <| fun ex m -> raise ex        
 
 Message publishing can be accomplished like this:
