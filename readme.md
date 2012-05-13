@@ -87,7 +87,7 @@ Message publishing can be accomplished like this:
 
 A few other handy functions include Unsubscribe and DeleteTopic:
 
-	Unsubscribe "topictest2" "AllTopics5"
+	Unsubscribe "topictest2" "AllTopics4"
 	DeleteTopic "topictest2"
 
 Releases
