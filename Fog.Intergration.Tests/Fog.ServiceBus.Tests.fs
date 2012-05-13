@@ -6,10 +6,7 @@ open FsUnit
 open Fog.ServiceBus
 open Microsoft.ServiceBus.Messaging
 
-[<Serializable>]
-type TestRecord = {
-    Name : string
-}
+type TestRecord = { Name : string }
 
 let testRecord = { Name = "test" } 
 

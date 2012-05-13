@@ -6,8 +6,6 @@ open Microsoft.WindowsAzure.StorageClient
 open System.Data.Services.Client
 open System.IO
 open Fog.Core
-open Microsoft.FSharp.Linq
-open Microsoft.FSharp.Linq.Query
 
 let BuildTableClientWithConnStr(connectionString) =
     memoize (fun conn -> 
