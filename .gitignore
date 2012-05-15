@@ -2,3 +2,6 @@ _ReSharper.Fog
 Fog.suo
 Fog.sln.docstates
 *.nupkg
+*/bin
+*/obj
+*/csx
