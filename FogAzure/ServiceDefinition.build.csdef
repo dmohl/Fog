@@ -9,7 +9,7 @@
   **********************************************************************************************
 -->
 <ServiceDefinition name="FogAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
-  <WorkerRole name="Fog.Intergration.Tests" vmsize="Small">
+  <WorkerRole name="Fog.Integration.Tests" vmsize="Small">
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>

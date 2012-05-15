@@ -1,4 +1,4 @@
-﻿namespace Fog.Intergration.Tests
+﻿namespace Fog.Integration.Tests
 
 open System
 open System.Collections.Generic
@@ -25,12 +25,12 @@ type WorkerRole() =
  
     override wr.Run() =
         try
-            log "Fog.Intergration.Tests entry point called" "Information"
+            log "Fog.Integration.Tests entry point called" "Information"
             Fog.Storage.Blob.Tests.RunAll()
             Fog.Storage.Table.Tests.RunAll()
             Fog.Storage.Queue.Tests.RunAll()
             Fog.ServiceBus.Tests.RunAll()
-            log "Fog.Intergration.Tests completed successfully" "Information"
+            log "Fog.Integration.Tests completed successfully" "Information"
             //duration Storage.Load.Tests.RunBlobTest
             //duration Storage.Load.Tests.RunTableTest
             //duration Storage.Load.Tests.RunQueueTest
