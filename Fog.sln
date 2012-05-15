@@ -5,7 +5,7 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fog", "Fog\Fog.fsproj", "{5
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "FogAzure", "FogAzure\FogAzure.ccproj", "{B0FBE013-3ED1-4485-8A64-E6B131C256A4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fog.Intergration.Tests", "Fog.Intergration.Tests\Fog.Intergration.Tests.fsproj", "{C0381FA8-7461-4F75-9176-FD575B591C6A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fog.Integration.Tests", "Fog.Integration.Tests\Fog.Integration.Tests.fsproj", "{C0381FA8-7461-4F75-9176-FD575B591C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
