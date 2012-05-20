@@ -26,9 +26,12 @@ let GetServiceQueueManagerWithTokenProvider (tokenProvider:TokenProvider) scheme
 
 let CreateQueueWithManager (serviceQueueManager:NamespaceManager) (queueName:string) =
     let qName = queueName
-    match serviceQueueManager.QueueExists(qName) with
-    | true -> serviceQueueManager.GetQueue(qName), qName
-    | _ -> serviceQueueManager.CreateQueue(qName), qName
+    try
+        match serviceQueueManager.QueueExists(qName) with
+        | true -> serviceQueueManager.GetQueue(qName), qName
+        | _ -> serviceQueueManager.CreateQueue(qName), qName
+    with
+    | :? MessagingEntityAlreadyExistsException -> serviceQueueManager.GetQueue(qName), qName
 
 let GetMessagingFactory (address:string) (tokenProvider:TokenProvider) =
     memoize
@@ -57,19 +60,39 @@ let SendMessage (queueName:string) message =
     let serviceManager, tokenProvider = getDefaultServiceManagerAndTokenProvider()
     SendMessageWithManager serviceManager tokenProvider (queueName.ToLower()) message
 
+let private safeComplete (message:BrokeredMessage) = 
+    try
+        message.Complete()
+    with
+    | :? MessageLockLostException -> ()
+    | :? MessagingException -> ()
+    | ex -> raise ex
+
+let private safeAbandon (message:BrokeredMessage) = 
+    try
+        message.Abandon()
+        true
+    with
+    | :? MessageLockLostException -> false
+    | :? MessagingException -> false
+
 let private handleMessageFromQueueOrTopic (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) successHandler failureHandler = 
     let factory = GetMessagingFactory serviceManager.Address.AbsoluteUri tokenProvider 
     let messageReceiver = factory.CreateMessageReceiver(queueName.ToLower())
-    let rec handleMessage() = async {
-        let message = messageReceiver.Receive()
-        if message <> null then
-            try
-                successHandler message
-                message.Complete()
-            with
-            | ex ->
-                failureHandler ex message 
-                message.Abandon() } |> Async.Start
+    let rec handleMessage() = 
+        async {
+            let message = messageReceiver.Receive()
+            if message <> null then
+                try
+                    message |> safeComplete
+                    successHandler message                
+                with
+                | ex ->
+                    if not (safeAbandon(message)) then
+                        failureHandler ex message 
+            handleMessage() 
+        } |> Async.Start
+    
     handleMessage()
 
 let HandleMessagesWithManager (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) successHandler failureHandler = 
@@ -82,9 +105,12 @@ let HandleMessages (queueName:string) successHandler failureHandler =
 
 let CreateTopicWithManager (manager:NamespaceManager) (topicName:string) =
     let topic = topicName
-    match manager.TopicExists(topic) with
-    | true -> manager.GetTopic topic, topic
-    | false -> manager.CreateTopic topic, topic
+    try
+        match manager.TopicExists(topic) with
+        | true -> manager.GetTopic topic, topic
+        | false -> manager.CreateTopic topic, topic
+    with
+    | :? MessagingEntityAlreadyExistsException -> manager.GetTopic topic, topic
 
 let CreateSubscriptionWithManager (manager:NamespaceManager) (topicName:string) (subscriptionName:string) =
     let topic = topicName

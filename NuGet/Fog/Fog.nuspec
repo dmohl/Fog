@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Fog</id>
+    <version>0.1.0.0</version>
+    <authors>Daniel Mohl</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Fog brings the cloud down to earth and harnesses it with F#. It makes interaction with the Azure .NET SDK easier.</description>
+    <summary>
+	Fog brings the cloud down to earth and harnesses it with F#. It makes interaction with the Azure .NET SDK easier. 
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/dmohl/Fog</projectUrl> 
+    <licenseUrl>https://github.com/dmohl/Fog/blob/master/MIT.License.txt</licenseUrl>
+	<tags>F# fsharp Azure</tags>
+  </metadata>
+  <files>
+	  <file src="Lib\Net40\*.*" target="Lib\Net40" />
+  </files>
+</package>
