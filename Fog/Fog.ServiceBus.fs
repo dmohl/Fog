@@ -1,6 +1,7 @@
 ﻿module Fog.ServiceBus
 
 open System
+open System.Diagnostics
 open Microsoft.ServiceBus
 open Microsoft.ServiceBus.Messaging
 open Microsoft.WindowsAzure.ServiceRuntime
@@ -40,7 +41,7 @@ let GetMessagingFactory (address:string) (tokenProvider:TokenProvider) =
 
 let private sendMessageToQueueOrTopic (manager:NamespaceManager) (tokenProvider:TokenProvider) (targetName:string) message =
     let factory = GetMessagingFactory manager.Address.AbsoluteUri tokenProvider 
-    let messageSender = factory.CreateMessageSender(targetName.ToLower())
+    let messageSender = factory.CreateMessageSender(targetName)
     use message = new BrokeredMessage(message)
     messageSender.Send(message)
 
@@ -58,14 +59,14 @@ let private getDefaultServiceManagerAndTokenProvider() =
 
 let SendMessage (queueName:string) message = 
     let serviceManager, tokenProvider = getDefaultServiceManagerAndTokenProvider()
-    SendMessageWithManager serviceManager tokenProvider (queueName.ToLower()) message
+    SendMessageWithManager serviceManager tokenProvider (queueName) message
 
 let private safeComplete (message:BrokeredMessage) = 
     try
         message.Complete()
     with
-    | :? MessageLockLostException -> ()
-    | :? MessagingException -> ()
+    | :? MessageLockLostException -> () // Ignore according to http://windowsazurecat.com/2011/09/best-practices-leveraging-windows-azure-service-bus-brokered-messaging-api/
+    | :? MessagingException -> () // Ignore according to http://windowsazurecat.com/2011/09/best-practices-leveraging-windows-azure-service-bus-brokered-messaging-api/
     | ex -> raise ex
 
 let private safeAbandon (message:BrokeredMessage) = 
@@ -73,25 +74,30 @@ let private safeAbandon (message:BrokeredMessage) =
         message.Abandon()
         true
     with
-    | :? MessageLockLostException -> false
-    | :? MessagingException -> false
+    | :? MessageLockLostException -> false // Ignore according to http://windowsazurecat.com/2011/09/best-practices-leveraging-windows-azure-service-bus-brokered-messaging-api/
+    | :? MessagingException -> false // Ignore according to http://windowsazurecat.com/2011/09/best-practices-leveraging-windows-azure-service-bus-brokered-messaging-api/
 
 let private handleMessageFromQueueOrTopic (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) successHandler failureHandler = 
     let factory = GetMessagingFactory serviceManager.Address.AbsoluteUri tokenProvider 
-    let messageReceiver = factory.CreateMessageReceiver(queueName.ToLower())
+    let messageReceiver = factory.CreateMessageReceiver(queueName)
     let rec handleMessage() = 
         async {
-            let message = messageReceiver.Receive()
-            if message <> null then
-                try
-                    message |> safeComplete
-                    successHandler message                
-                with
-                | ex ->
-                    if not (safeAbandon(message)) then
-                        failureHandler ex message 
-            handleMessage() 
-        } |> Async.Start
+            do! Async.Sleep(1000)
+            try   
+                let message = messageReceiver.Receive()
+                if message <> null then
+                    try
+                        message |> safeComplete
+                        successHandler message                
+                    with
+                    | ex ->
+                        if not (safeAbandon(message)) then
+                            failureHandler ex message 
+                handleMessage() 
+            with
+            | :? MessagingEntityNotFoundException as exn -> () // Ignore as this just means the queue/topic isn't yet available 
+            | ex -> failureHandler ex <| new BrokeredMessage("")
+        } |> Async.Start 
     
     handleMessage()
 
@@ -101,7 +107,7 @@ let HandleMessagesWithManager (serviceManager:NamespaceManager) (tokenProvider:T
 
 let HandleMessages (queueName:string) successHandler failureHandler = 
     let serviceManager, tokenProvider = getDefaultServiceManagerAndTokenProvider()
-    HandleMessagesWithManager serviceManager tokenProvider (queueName.ToLower()) successHandler failureHandler
+    HandleMessagesWithManager serviceManager tokenProvider (queueName) successHandler failureHandler
 
 let CreateTopicWithManager (manager:NamespaceManager) (topicName:string) =
     let topic = topicName

@@ -27,21 +27,41 @@ let ``It should send a message``() =
     SendMessageWithManager manager tokenProvider "testQueue" testRecord
 
 let ``It should handle a message``() =
+    let sub1 = ref ""
     let tokenProvider = CreateSecurityToken()
     let manager = GetServiceQueueManagerWithTokenProvider tokenProvider "sb" "dmohlfsmvc4azure" String.Empty
     SendMessageWithManager manager tokenProvider "testQueue" testRecord
     HandleMessagesWithManager manager tokenProvider "testQueue"
-        <| fun m -> m.GetBody<TestRecord>().Name |> should equal "test"
+        <| fun m -> 
+             sub1 := "complete"
+             m.GetBody<TestRecord>().Name |> should equal "test"
         <| fun ex m -> raise ex        
+    let rec loop() = 
+        async {
+            match !sub1 with
+            | "" -> loop()
+            | _ -> () 
+        } |> Async.Start
+    loop()
 
 let ``It should send a message with friendly function``() =
     SendMessage "testQueue" testRecord
 
 let ``It should handle a message with friendly function``() =
+    let sub1 = ref ""
     SendMessage "testQueue" testRecord
     HandleMessages "testQueue"
-        <| fun m -> m.GetBody<TestRecord>().Name |> should equal "test"
+        <| fun m -> 
+             sub1 := "complete"
+             m.GetBody<TestRecord>().Name |> should equal "test"
         <| fun ex m -> raise ex        
+    let rec loop() = 
+        async {
+            match !sub1 with
+            | "" -> loop()
+            | _ -> () 
+        } |> Async.Start
+    loop()
 
 let ``It should publish a message``() =
     let tokenProvider = CreateSecurityToken()
@@ -49,31 +69,36 @@ let ``It should publish a message``() =
     PublishWithManager manager tokenProvider "topictest" testRecord
 
 let ``It should subscribe unsubscribe and delete a topic``() =
-    let sub1 = ref ""
-    let sub2 = ref ""
-    let tokenProvider = CreateSecurityToken()
-    let manager = GetServiceQueueManagerWithTokenProvider tokenProvider "sb" "dmohlfsmvc4azure" String.Empty
-    SubscribeWithManager manager tokenProvider "topictest" "AllTopics1"
-        <| fun m ->
-              sub1 := "complete" 
-              m.GetBody<TestRecord>().Name |> should equal "test"
-        <| fun ex m -> raise ex        
+    try
+        let sub1 = ref ""
+        let sub2 = ref ""
+        let tokenProvider = CreateSecurityToken()
+        let manager = GetServiceQueueManagerWithTokenProvider tokenProvider "sb" "dmohlfsmvc4azure" String.Empty
+        SubscribeWithManager manager tokenProvider "topictest" "AllTopics1"
+            <| fun m ->
+                  sub1 := "complete" 
+                  m.GetBody<TestRecord>().Name |> should equal "test"
+            <| fun ex m -> 
+                  raise ex        
 
-    SubscribeWithManager manager tokenProvider "topictest" "AllTopics2"
-        <| fun m -> 
-              sub2 := "complete" 
-              m.GetBody<TestRecord>().Name |> should equal "test"
-        <| fun ex m -> raise ex        
-    PublishWithManager manager tokenProvider "topictest" testRecord
-    let rec loop() = async {
-        match !sub1, !sub2 with
-        | "", _ -> loop()
-        | _, "" -> loop()
-        | _, _ -> 
-            UnsubscribeWithManager manager tokenProvider "topictest" "AllTopics1"
-            UnsubscribeWithManager manager tokenProvider "topictest" "AllTopics2"
-            DeleteTopicWithManager manager tokenProvider "topictest" } |> Async.Start
-    loop()
+        SubscribeWithManager manager tokenProvider "topictest" "AllTopics2"
+            <| fun m -> 
+                  sub2 := "complete" 
+                  m.GetBody<TestRecord>().Name |> should equal "test"
+            <| fun ex m -> 
+                  raise ex        
+        PublishWithManager manager tokenProvider "topictest" testRecord
+        let rec loop() = async {
+            match !sub1, !sub2 with
+            | "", _ -> loop()
+            | _, "" -> loop()
+            | _, _ -> 
+                UnsubscribeWithManager manager tokenProvider "topictest" "AllTopics1"
+                UnsubscribeWithManager manager tokenProvider "topictest" "AllTopics2"
+                DeleteTopicWithManager manager tokenProvider "topictest" } |> Async.Start
+        loop()
+    with
+    | ex -> printfn "here"
 
 let ``It should subscribe unsubscribe and delete a topic with friendly functions``() =
     let sub1 = ref ""
