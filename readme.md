@@ -3,7 +3,7 @@ Fog
 
 **Fog** brings the cloud down to earth and wraps it in something more easily used by F#. It provides a more functional approach to creating Windows Azure apps with F#.
 
-Building Azure apps with Fog that need to interact with Azure Table Storage, Blob Storage, Queue Storage, and/or the Service Bus is very easy 
+Building Azure apps with Fog that need to interact with Azure Table Storage, Blob Storage, Queue Storage, Caching, and/or the Service Bus is very easy 
 with the help of a few configuration settings that have specific names. The examples that follow use this approach. Fog also provides more fine-grained
 interaction if that is desired. See the integration tests for examples.
 
@@ -89,6 +89,28 @@ A few other handy functions include Unsubscribe and DeleteTopic:
 	Unsubscribe "topictest2" "AllTopics4"
 	DeleteTopic "topictest2"
 
+**Caching**
+
+Adding items to cache can be done with code such as the following (note: you'll need to get everything setup and add the web or app.config settings as described at https://www.windowsazure.com/en-us/develop/net/how-to-guides/cache/):
+
+	[<DataContract>]
+	type TestRecord = 
+		{ [<DataMember>] mutable Id : Guid
+		  [<DataMember>] mutable Name : string }
+
+	let testRecord = { Id = Guid.NewGuid(); Name = "Dan" }
+
+	let key = testRecord.Id.ToString()  
+	Put key testRecord |> ignore
+
+You can also specify a timeout value for the cache outside of the default 48 hours with code like this:
+   
+	PutWithCustomTimeout key testRecord 10 |> ignore
+   
+Gettig the value from cache is done like this:
+
+	let result = Get<TestRecord> key
+
 How To Get It
 =======
 
@@ -96,11 +118,12 @@ Fog is available on NuGet Gallery as id Fog.
 
 Releases
 =======
+0.1.3.0 - Includes Azure Caching related functions and several bug fixes.
 0.1.0.0 - Is the initial release which provides support for Azure table, blob, and queue storage as well as Service Bus Queues and Topics. 
 
 Roadmap
 =======
-* Add async functions
+* Add additional async functions
 * Add code-based and convention based configuration
 
 MIT License

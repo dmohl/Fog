@@ -40,9 +40,16 @@
     <Compile Include="Fog.Storage.Table.fs" />
     <Compile Include="Fog.Storage.Queue.fs" />
     <Compile Include="Fog.ServiceBus.fs" />
+    <Compile Include="Fog.Caching.fs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client">
+      <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\Cache\ref\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core">
+      <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\Cache\ref\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ServiceBus">
       <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\ServiceBus\ref\Microsoft.ServiceBus.dll</HintPath>
     </Reference>
@@ -51,6 +58,12 @@
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.StorageClient">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Windows Azure SDK\v1.6\ref\Microsoft.WindowsAzure.StorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsFabric.Common">
+      <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\Cache\ref\Microsoft.WindowsFabric.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsFabric.Data.Common">
+      <HintPath>..\..\..\Program Files\Windows Azure SDK\v1.6\Cache\ref\Microsoft.WindowsFabric.Data.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core" />

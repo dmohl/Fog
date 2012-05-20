@@ -29,8 +29,12 @@ type WorkerRole() =
             Fog.Storage.Blob.Tests.RunAll()
             Fog.Storage.Table.Tests.RunAll()
             Fog.Storage.Queue.Tests.RunAll()
-            Fog.ServiceBus.Tests.RunAll()
+            // Replace the config information before uncommenting the call to run the ServiceBus tests
+            //Fog.ServiceBus.Tests.RunAll()
+            // Replace the app config cache relted information before uncommenting the call to run these tests
+            // Fog.Caching.Tests.RunAll()
             log "Fog.Integration.Tests completed successfully" "Information"
+            // The following load tests take a little while to run. Be aware of this before uncommenting.
             //duration Storage.Load.Tests.RunBlobTest
             //duration Storage.Load.Tests.RunTableTest
             //duration Storage.Load.Tests.RunQueueTest
