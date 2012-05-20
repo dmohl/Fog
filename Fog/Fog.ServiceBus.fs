@@ -7,6 +7,12 @@ open Microsoft.ServiceBus.Messaging
 open Microsoft.WindowsAzure.ServiceRuntime
 open Fog.Core
 
+type MessageSender with
+    member x.AsyncSend (message:BrokeredMessage) =
+        Async.FromBeginEnd(message,
+            (fun (message:BrokeredMessage, callback, state) -> x.BeginSend(message, callback, state)),
+            x.EndSend)       
+
 let CreateSecurityTokenWithKeys issuerConfigKey keyConfigKey = 
     memoize 
         (fun issuerKey keyKey -> 
@@ -39,11 +45,18 @@ let GetMessagingFactory (address:string) (tokenProvider:TokenProvider) =
         (fun (addr:string) (tp:TokenProvider) -> 
             MessagingFactory.Create(addr, tp) ) address tokenProvider   
 
+let private createMessageSender (manager:NamespaceManager) (tokenProvider:TokenProvider) (targetName:string) =
+    memoize
+        (fun (uri:string) (tProvider:TokenProvider) (name:string) -> 
+             let factory = GetMessagingFactory uri tProvider 
+             factory.CreateMessageSender(name) ) 
+           manager.Address.AbsoluteUri tokenProvider targetName
+
 let private sendMessageToQueueOrTopic (manager:NamespaceManager) (tokenProvider:TokenProvider) (targetName:string) message =
-    let factory = GetMessagingFactory manager.Address.AbsoluteUri tokenProvider 
-    let messageSender = factory.CreateMessageSender(targetName)
+    let messageSender = createMessageSender manager tokenProvider targetName
     use message = new BrokeredMessage(message)
     messageSender.Send(message)
+    messageSender.Close()
 
 let SendMessageWithManager (serviceManager:NamespaceManager) (tokenProvider:TokenProvider) (queueName:string) message = 
     let qDesc, qName = CreateQueueWithManager serviceManager queueName 
@@ -158,3 +171,5 @@ let Unsubscribe topicName subscriptionName =
 let DeleteTopic topicName =
     let manager, tokenProvider = getDefaultServiceManagerAndTokenProvider()
     DeleteTopicWithManager manager tokenProvider topicName
+
+
