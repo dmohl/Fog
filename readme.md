@@ -91,7 +91,7 @@ A few other handy functions include Unsubscribe and DeleteTopic:
 
 **Caching**
 
-Adding items to cache can be done with code such as the following (note: you'll need to get everything setup and add the web or app.config settings as described at https://www.windowsazure.com/en-us/develop/net/how-to-guides/cache/):
+Adding items to cache can be done with code such as the following (note: you'll need to get everything setup and add the web or app.config settings as described at https://www.windowsazure.com/en-us/develop/net/how-to-guides/cache/ ):
 
 	[<DataContract>]
 	type TestRecord = 
