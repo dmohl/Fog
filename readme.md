@@ -1,3 +1,5 @@
+The main project page for Fog can be found at http://dmohl.github.com/Fog/.
+
 Fog
 =======
 
