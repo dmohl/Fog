@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Fog by dmohl</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Fog</h1>
+          <h2>Fog brings the cloud down to earth and harnesses it with F#.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/dmohl/Fog/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/dmohl/Fog/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/dmohl/Fog" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>Fog</h1>
+
+<p><strong>Fog</strong> brings the cloud down to earth and wraps it in something more easily used by F#. It provides a more functional approach to creating Windows Azure apps with F#.</p>
+
+<p>Building Azure apps with Fog that need to interact with Azure Table Storage, Blob Storage, Queue Storage, Caching, and/or the Service Bus is very easy 
+with the help of a few configuration settings that have specific names. The examples that follow use this approach. Fog also provides more fine-grained
+interaction if that is desired. See the integration tests for examples.</p>
+
+<h1>How To Get It</h1>
+
+<p>Fog is available on NuGet Gallery as id Fog.</p>
+
+<h1>Getting Started</h1>
+
+<p><strong>Blob Storage</strong></p>
+
+<p>With Fog all you have to do to interact with Azure blob storage is to add the connection string information in the config with a name of 
+"BlobStorageConnectionString". Once that is done, you can use syntax like the following:</p>
+
+<pre><code>UploadBlob "testcontainer" "testblob" "This is a test" |&gt; ignore
+DeleteBlob "testcontainer" "testblob"
+</code></pre>
+
+<p>or</p>
+
+<pre><code>UploadBlob "testcontainer" "testblob" testBytes |&gt; ignore
+DownloadBlob&lt;byte[]&gt; "testcontainer" "testblob"
+</code></pre>
+
+<p><strong>Table Storage</strong></p>
+
+<p>The simplest way to interact with Azure table storage is to add the connection string information in the config with a name of 
+"TableStorageConnectionString". Once that is done, you can use syntax like the following:</p>
+
+<pre><code>[&lt;DataServiceKey("PartitionKey", "RowKey")&gt;]
+type TestClass() = 
+    let mutable partitionKey = ""
+    let mutable rowKey = ""
+    let mutable name = ""
+    member x.PartitionKey with get() = partitionKey and set v = partitionKey &lt;- v
+    member x.RowKey with get() = rowKey and set v = rowKey &lt;- v
+    member x.Name with get() = name and set v = name &lt;- v
+
+let originalClass = TestClass( PartitionKey = "TestPart", RowKey = Guid.NewGuid().ToString(), Name = "test" )
+
+CreateEntity "testtable" originalClass |&gt; ignore
+
+let newClass = originalClass
+newClass.Name &lt;- "test2"
+UpdateEntity "testtable" newClass |&gt; ignore
+
+DeleteEntity "testtable" newClass
+</code></pre>
+
+<p><strong>Queue Storage</strong></p>
+
+<p>For queue storage, add the connection string configuration value with setting name "QueueStorageConnectionString".</p>
+
+<pre><code>AddMessage "testqueue" "This is a test message" |&gt; ignore
+let result = GetMessages "testqueue" 20 5
+for m in result do
+    DeleteMessage "testqueue" m
+</code></pre>
+
+<p><strong>Service Bus</strong></p>
+
+<p>There are a few service bus related config entries. Here's the list of expected names: ServiceBusIssuer, ServiceBusKey, ServiceBusScheme, ServiceBusNamespace, ServiceBusServicePath</p>
+
+<p>To send a message do this:</p>
+
+<pre><code>type TestRecord = { Name : string }
+
+let testRecord = { Name = "test" } 
+
+SendMessage "testQueue" testRecord
+</code></pre>
+
+<p>To receive a message, pass the queue name, a function to handle successful message retrieval, and another function to handle errors.</p>
+
+<pre><code>HandleMessages "testQueue"
+    &lt;| fun m -&gt; printfn "%s" m.GetBody&lt;TestRecord&gt;().Name
+    &lt;| fun ex m -&gt; raise ex        
+</code></pre>
+
+<p>To use topics in a pub/sub type of scenario, use something like the following to subscribe:</p>
+
+<pre><code>Subscribe "topictest2" "AllTopics4"
+    &lt;| fun m -&gt; printfn "%s" m.GetBody&lt;TestRecord&gt;().Name
+    &lt;| fun ex m -&gt; raise ex        
+</code></pre>
+
+<p>Message publishing can be accomplished like this:</p>
+
+<pre><code>Publish "topictest2" testRecord
+</code></pre>
+
+<p>A few other handy functions include Unsubscribe and DeleteTopic:</p>
+
+<pre><code>Unsubscribe "topictest2" "AllTopics4"
+DeleteTopic "topictest2"
+</code></pre>
+
+<p><strong>Caching</strong></p>
+
+<p>Adding items to cache can be done with code such as the following (note: you'll need to get everything setup and add the web or app.config settings as described at <a href="https://www.windowsazure.com/en-us/develop/net/how-to-guides/cache/">https://www.windowsazure.com/en-us/develop/net/how-to-guides/cache/</a> ):</p>
+
+<pre><code>[&lt;DataContract&gt;]
+type TestRecord = 
+    { [&lt;DataMember&gt;] mutable Id : Guid
+      [&lt;DataMember&gt;] mutable Name : string }
+
+let testRecord = { Id = Guid.NewGuid(); Name = "Dan" }
+
+let key = testRecord.Id.ToString()  
+Put key testRecord |&gt; ignore
+</code></pre>
+
+<p>You can also specify a timeout value for the cache outside of the default 48 hours with code like this:</p>
+
+<pre><code>PutWithCustomTimeout key testRecord 10 |&gt; ignore
+</code></pre>
+
+<p>Gettig the value from cache is done like this:</p>
+
+<pre><code>let result = Get&lt;TestRecord&gt; key
+</code></pre>
+        </section>
+
+        <footer>
+          Fog is maintained by <a href="https://github.com/dmohl">dmohl</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
