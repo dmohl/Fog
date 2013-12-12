@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fog", "Fog\Fog.fsproj", "{5C231890-6169-40C1-85D5-7798F054F41E}"
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "FogAzure", "FogAzure\FogAzure.ccproj", "{B0FBE013-3ED1-4485-8A64-E6B131C256A4}"
